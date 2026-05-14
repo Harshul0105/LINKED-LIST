@@ -1,0 +1,55 @@
+#include<iostream>
+using namespace std;
+//Structure of Node
+class Node
+{
+  public:
+  int val;
+  Node *next;
+  public:
+  Node(int v)
+  {
+    val=v;
+    next=NULL;
+  }
+};
+void insertAtStart(Node *head, Node *tail)
+{
+ if(head== NULL)
+ {
+   Node *n= new Node(2);
+   head =n;
+   tail= n;
+ }
+ else
+ {
+   Node *n = new Node(3);
+   n->next= n;
+   head= n;
+ }
+}
+
+void insertAtEnd(Node *head, Node *tail)
+{
+ if(head== NULL)
+ {
+   Node *n= new Node(2);
+   head =n;
+   tail= n;
+ }
+ else
+ {
+   Node *n = new Node(3);
+   tail->next= n;
+   tail= n;
+ }
+}
+
+int main()
+{
+  Node *head;
+  head = NULL;
+  insertAtStart(head);
+  
+  return 0;
+}
