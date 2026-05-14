@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+//Doubly Linked list
+
+class Node
+{
+  public:
+  Node *prev;
+  int val;
+  Node *next;
+  
+  Node(int v)
+  {
+    val= v;
+    prev= NULL;
+    next= NULL:
+  }
+};
